@@ -298,7 +298,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               width: 235,
                             ),
 
-
                           ],
                         ),
                       ],
@@ -307,9 +306,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
               ),
-
-
-
             ],
           ),
         ),
