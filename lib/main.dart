@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'setting.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
 
+      home: MyHomePage(),
     );
   }
 }
