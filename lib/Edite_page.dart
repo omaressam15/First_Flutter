@@ -9,9 +9,7 @@ class EditePage extends StatefulWidget {
 }
 
 class _Edite_pageState extends State<EditePage> {
-  int _stackIndex = 0;
 
-  String _singleValue = "Text alignment right";
   String _verticalGroupValue = "Pending";
   List<String> _status = ["انثي", "ذكر"];
 

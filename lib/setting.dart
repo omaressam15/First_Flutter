@@ -6,6 +6,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   bool isSwitched = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,39 +50,43 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Container(
-                height:55 ,
-                width:150 ,
+                height: 55,
+                width: 150,
                 margin: EdgeInsets.only(bottom: 30),
                 alignment: Alignment.center,
-                child: Text('تعاديل بياناتي',style: TextStyle(color: Colors.white),),
-                decoration: BoxDecoration(
-                    color:Colors.green,
-                    borderRadius: BorderRadius.all(Radius.circular(30))
+                child: Text(
+                  'تعاديل بياناتي',
+                  style: TextStyle(color: Colors.white),
                 ),
+                decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.all(Radius.circular(30))),
               ),
-
               Expanded(
-                flex:1 ,
-                child:Column(
+                flex: 1,
+                child: Column(
                   children: [
                     Container(
                       child: Column(
-
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                             children: [
                               Container(
                                 alignment: Alignment.centerLeft,
-
-                                child: Icon(Icons.arrow_back_ios,color: Colors.green,),
+                                child: Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Colors.green,
+                                ),
                                 height: 20,
                                 width: 25,
                               ),
-
                               SizedBox(
-                                child:  Text("منتجاتي",textAlign: TextAlign.right,style: TextStyle(fontSize: 16),),
+                                child: Text(
+                                  "منتجاتي",
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(fontSize: 16),
+                                ),
                                 height: 25,
                                 width: 245,
                               ),
@@ -90,13 +95,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           SizedBox(
                             height: 25,
                             width: 300,
-                            child:  Divider(
+                            child: Divider(
                               height: 1,
                               color: Colors.grey,
-
                             ),
                           ),
-
                         ],
                       ),
                     ),
@@ -105,17 +108,20 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                             children: [
                               Container(
                                 alignment: Alignment.centerLeft,
-                                child: Icon(Icons.arrow_back_ios,color: Colors.green),
+                                child: Icon(Icons.arrow_back_ios,
+                                    color: Colors.green),
                                 height: 20,
                                 width: 25,
                               ),
-
                               SizedBox(
-                                child:  Text("ادخل كلمة المرور",textAlign: TextAlign.right,style: TextStyle(fontSize: 16),),
+                                child: Text(
+                                  "ادخل كلمة المرور",
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(fontSize: 16),
+                                ),
                                 height: 25,
                                 width: 245,
                               ),
@@ -124,187 +130,194 @@ class _MyHomePageState extends State<MyHomePage> {
                           SizedBox(
                             height: 25,
                             width: 300,
-                            child:  Divider(
+                            child: Divider(
                               height: 1,
                               color: Colors.grey,
-
                             ),
                           ),
-
                         ],
                       ),
                     ),
                     Container(
                       child: Column(
-
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Container(
                                 alignment: Alignment.centerLeft,
-                                height:25 ,
+                                height: 25,
                                 width: 60,
                                 child: Switch(
-                                  autofocus: true,
                                   value: isSwitched,
-                                  onChanged: (value){
+                                  onChanged: (value) {
                                     setState(() {
-                                      isSwitched=value;
+                                      isSwitched = value;
                                       print(isSwitched);
                                     });
                                   },
                                   activeTrackColor: Colors.lightGreenAccent,
                                   activeColor: Colors.green,
-
                                 ),
                               ),
                               SizedBox(
-                                child:  Text("الاشعارات",textAlign: TextAlign.right,style: TextStyle(fontSize: 16),),
+                                child: Text(
+                                  "الاشعارات",
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(fontSize: 16),
+                                ),
                                 height: 25,
                                 width: 180,
                               ),
-
                             ],
                           ),
                           SizedBox(
                             height: 25,
                             width: 300,
-                            child:  Divider(
+                            child: Divider(
                               height: 1,
                               color: Colors.grey,
-
                             ),
                           ),
-
                         ],
                       ),
                     ),
                     Container(
                       child: Column(
-
                         children: [
                           Row(
                             children: [
-
                               SizedBox(
-
-                                child:  Text("تسجيل الخروج",textAlign: TextAlign.right,style: TextStyle(fontSize: 16,color: Colors.red),),
+                                child: Text(
+                                  "تسجيل الخروج",
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(
+                                      fontSize: 16, color: Colors.red),
+                                ),
                                 height: 25,
                                 width: 330,
                               ),
                             ],
                           ),
-
                         ],
                       ),
                     ),
                   ],
-                ) ,
+                ),
               ),
-
               Expanded(
                 flex: 1,
                 child: Column(
-                children: [
-                  Padding(padding: EdgeInsets.only(bottom: 10)),
-
-                  Container(
-                    child: Column(
-
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              child: Icon(Icons.arrow_back_ios,color: Colors.green,),
-                              height: 20,
-                              width: 100,
-                            ),
-
-                            SizedBox(
-                              child:  Text("الدعم الفني",textAlign: TextAlign.right,style: TextStyle(fontSize: 16),),
-                              height: 25,
-                              width: 230,
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 25,
-                          width: 300,
-                          child:  Divider(
-                            height: 1,
-                            color: Colors.grey,
-
-                          ),
-                        ),
-
-                      ],
-                    ),
-                  ),
-                  Container(
-                    child: Column(
-
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              child: Icon(Icons.arrow_back_ios,color: Colors.green,),
-                              height: 20,
-                              width: 100,
-                            ),
-
-                            SizedBox(
-                              child:  Text("شروط و احكام",textAlign: TextAlign.right,style: TextStyle(fontSize: 16),),
-                              height: 25,
-                              width: 230,
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 25,
-                          width: 300,
-                          child:  Divider(
-                            height: 1,
-                            color: Colors.grey,
-
-                          ),
-                        ),
-
-                      ],
-                    ),
-                  ),
-                  Container(
-                    child: Column(
-
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              child: Icon(Icons.arrow_back_ios,color: Colors.green,),
-                              height: 20,
-                              width: 20,
-                              margin: EdgeInsets.only(left: 35),
-                            ),
-                            SizedBox(
-                              width: 40,
-                              height: 40,
-                              child: Image(
-                                image: NetworkImage("https://www.flagdetective.com/images/download/saudi-arabia-hi.jpg"),
+                  children: [
+                    Padding(padding: EdgeInsets.only(bottom: 10)),
+                    Container(
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                child: Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Colors.green,
+                                ),
+                                height: 20,
+                                width: 100,
                               ),
+                              SizedBox(
+                                child: Text(
+                                  "الدعم الفني",
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(fontSize: 16),
+                                ),
+                                height: 25,
+                                width: 230,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 25,
+                            width: 300,
+                            child: Divider(
+                              height: 1,
+                              color: Colors.grey,
                             ),
-                            SizedBox(
-                              child:  Text("اللغة",textAlign: TextAlign.right,style: TextStyle(fontSize: 16),),
-                              height: 25,
-                              width: 235,
-                            ),
-
-                          ],
-                        ),
-                      ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
-              ),
+                    Container(
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                child: Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Colors.green,
+                                ),
+                                height: 20,
+                                width: 100,
+                              ),
+                              SizedBox(
+                                child: Text(
+                                  "شروط و احكام",
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(fontSize: 16),
+                                ),
+                                height: 25,
+                                width: 230,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 25,
+                            width: 300,
+                            child: Divider(
+                              height: 1,
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                child: Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Colors.green,
+                                ),
+                                height: 20,
+                                width: 20,
+                                margin: EdgeInsets.only(left: 35),
+                              ),
+                              SizedBox(
+                                width: 40,
+                                height: 40,
+                                child: Image(
+                                  image: NetworkImage(
+                                      "https://www.flagdetective.com/images/download/saudi-arabia-hi.jpg"),
+                                ),
+                              ),
+                              SizedBox(
+                                child: Text(
+                                  "اللغة",
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(fontSize: 16),
+                                ),
+                                height: 25,
+                                width: 235,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
