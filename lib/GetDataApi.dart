@@ -55,7 +55,7 @@ class _DataApiState extends State<DataApi> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Container(
+                SizedBox(
                   height: 50,
                   width: MediaQuery.of(context).size.width,
 
@@ -72,7 +72,7 @@ class _DataApiState extends State<DataApi> {
                     ],
                   ),
                 ),
-                Container(
+                SizedBox(
                   height: 50,
                   width: MediaQuery.of(context).size.width,
 
@@ -89,7 +89,7 @@ class _DataApiState extends State<DataApi> {
                     ],
                   ),
                 ),
-                Container(
+                SizedBox(
                   height: 50,
                   width: MediaQuery.of(context).size.width,
 
@@ -106,7 +106,7 @@ class _DataApiState extends State<DataApi> {
                     ],
                   ),
                 ),
-                Container(
+                SizedBox(
 
                   height: 50,
                   width: MediaQuery.of(context).size.width,
@@ -124,7 +124,7 @@ class _DataApiState extends State<DataApi> {
                     ],
                   ),
                 ),
-                Container(
+                SizedBox(
                   height: 40,
 
                   width: MediaQuery.of(context).size.width,
