@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/GetDataApi.dart';
-import 'package:flutter_app/ui_card/luggage.dart';
-import 'package:flutter_app/url_luncher.dart';
-
-import 'Edite_page.dart';
-import 'setting.dart';
 
 void main() {
   runApp(MyApp());

@@ -21,7 +21,7 @@ class _CardViewState extends State<CardView> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.9,
-      height:90 ,
+      height:89 ,
       child: Column(
 
         children: [
