@@ -36,7 +36,7 @@ class _MidecalsCardState extends State<MidecalsCard> {
 
         children: [
 
-          Container(
+          SizedBox(
             height: 20,
             width: MediaQuery.of(context).size.width,
 
@@ -53,7 +53,7 @@ class _MidecalsCardState extends State<MidecalsCard> {
               ],
             ),
           ),
-          Container(
+          SizedBox(
             height: 30,
             width: MediaQuery.of(context).size.width,
 
@@ -70,7 +70,7 @@ class _MidecalsCardState extends State<MidecalsCard> {
               ],
             ),
           ),
-          Container(
+          SizedBox(
             height: 30,
             width: MediaQuery.of(context).size.width,
 
