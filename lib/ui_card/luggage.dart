@@ -26,7 +26,7 @@ class _CardViewState extends State<CardView> {
 
         children: [
 
-          Container(
+          SizedBox(
             height: 30,
             width: MediaQuery.of(context).size.width,
 
@@ -43,7 +43,7 @@ class _CardViewState extends State<CardView> {
               ],
             ),
           ),
-          Container(
+          SizedBox(
             height: 30,
             width: MediaQuery.of(context).size.width,
 
@@ -60,7 +60,7 @@ class _CardViewState extends State<CardView> {
               ],
             ),
           ),
-          Container(
+          SizedBox(
             height: 30,
             width: MediaQuery.of(context).size.width,
 

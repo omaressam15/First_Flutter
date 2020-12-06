@@ -14,8 +14,10 @@ class _DataApiState extends State<DataApi> {
   int age;
   String county;
   String home ;
+
   List luggage = List();
   List midecals = List();
+
   bool isLoading = true;
 
   getDataFromRestApi() async {
@@ -26,10 +28,9 @@ class _DataApiState extends State<DataApi> {
     age = response.data['age'];
     county = response.data['country'];
     home = response.data['home_country'];
+
     luggage = response.data['luggage'];
     midecals = response.data['midecals'];
-
-    print(response.data["category"]);
 
     isLoading = false;
 
@@ -52,7 +53,6 @@ class _DataApiState extends State<DataApi> {
       ):
          SafeArea(
           child: SingleChildScrollView(
-
             child: Column(
               children: [
                 Container(
@@ -107,6 +107,7 @@ class _DataApiState extends State<DataApi> {
                   ),
                 ),
                 Container(
+
                   height: 50,
                   width: MediaQuery.of(context).size.width,
 
@@ -123,8 +124,38 @@ class _DataApiState extends State<DataApi> {
                     ],
                   ),
                 ),
-
                 Container(
+                  height: 40,
+
+                  width: MediaQuery.of(context).size.width,
+
+                  child:Text("midecals",textAlign: TextAlign.center,style: TextStyle(fontSize: 30,color: Colors.red),),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width ,
+                  height:90 ,
+                   child:ListView.builder(
+                          shrinkWrap: true,
+
+                          scrollDirection: Axis.horizontal,
+                          itemCount: midecals.length,
+                          itemBuilder:(context,index){
+                            return Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                              child: MidecalsCard(
+                                name: midecals[index]['name'],
+                                price: midecals[index]['price'],
+                                category: midecals[index]['category'],
+
+                              ),
+                            );
+
+                          }
+                      ),
+
+                  ),
+
+                SizedBox(
                   height: 40,
 
                   width: MediaQuery.of(context).size.width,
@@ -139,7 +170,7 @@ class _DataApiState extends State<DataApi> {
                         itemCount: luggage.length,
                         itemBuilder:(context,index){
                           return Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+                            padding: EdgeInsets.symmetric(horizontal: 10,vertical: 7),
                             child: CardView(
                               name: luggage[index]['name'],
                               brand: luggage[index]['brand'],
@@ -150,38 +181,10 @@ class _DataApiState extends State<DataApi> {
                         }
 
                     ),
-                Container(
-                  height: 40,
-
-                  width: MediaQuery.of(context).size.width,
-
-                  child:Text("midecals",textAlign: TextAlign.center,style: TextStyle(fontSize: 30,color: Colors.red),),
-                ),
-                ListView.builder(
-                       shrinkWrap: true,
-                       physics: NeverScrollableScrollPhysics(),
-                       itemCount: midecals.length,
-                       itemBuilder:(context,index){
-                         return Padding(
-                           padding: EdgeInsets.symmetric(horizontal: 10,vertical: 15),
-                           child: MidecalsCard(
-                             name: midecals[index]['name'],
-                             price: midecals[index]['price'],
-                             category: midecals[index]['category'],
-
-
-
-
-                           ),
-                         );
-
-                       }
-                   ),
               ],
             ),
           ),
         ) ,
-
     );
   }
 }

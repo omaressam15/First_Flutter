@@ -20,19 +20,24 @@ class MidecalsCard extends StatefulWidget {
 class _MidecalsCardState extends State<MidecalsCard> {
 
 
+  getFromRestApi() async {
+    Response response = await Dio()
+        .get("https://run.mocky.io/v3/701ff6f4-0181-47fe-9461-473f6d0aec92");
 
+   widget.category = response.data["midecals"][1]["category"];
 
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.9,
-      height:90 ,
+      width: MediaQuery.of(context).size.width ,
+      height:80 ,
       child: Column(
 
         children: [
 
           Container(
-            height: 30,
+            height: 20,
             width: MediaQuery.of(context).size.width,
 
             child: Row(
@@ -79,12 +84,14 @@ class _MidecalsCardState extends State<MidecalsCard> {
 
                 SizedBox(
                   height: 22,
-                  width: MediaQuery.of(context).size.width*0.4,
-                  child: Text("${widget.category}",
-                    style: TextStyle(fontSize: 20,color: Colors.grey),
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.left,),
-                ),
+                  width: MediaQuery.of(context).size.width*0.5,
+                     child:Text("${widget.category.join(",")}",
+                        style: TextStyle(fontSize: 20,color: Colors.grey),
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.left,),
+
+
+                  ),
 
               ],
             ),
